@@ -4,13 +4,23 @@ This repository is for training prot2vec models and generating contextual vector
 
 ## Basic requirement
 
-To run the scripts in this repository, you need to install Python >= 2.7.x, Numpy >= 1.3, SciPy >= 0.7, Gensim >= 2.3.0.  
+To run the scripts in this repository, you need to install 
+	* Python >= 2.7.x
+	* [Numpy](http://www.numpy.org) >= 1.3
+	* [SciPy](https://www.scipy.org) >= 0.7 
+	* [Gensim](https://radimrehurek.com/gensim/) >= 2.3.0
+
+The detailed description for the word2vec and doc2vec model can be found in [Distributed representations of words and phrases and their compositionality](https://arxiv.org/pdf/1310.4546.pdf) and [Distributed representation of Sentences and Documents](https://cs.stanford.edu/~quocle/paragraph_vector.pdf). 
 
 ## Training your own prot2vec
 
-To train your own prot2vec model, you will need to prepare a database of protein sequences in the format of FASTA. Say the path to your protein sequence database is $path_to_database, you can train a prot2vec model by running the following script, 
+To train your own prot2vec model, you will need to prepare a database of protein sequences in the format of [FASTA](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp). 
 
+If the path to your protein sequence database is ```$path_to_database```, you can train a prot2vec model by running the following script, 
+
+```
 > ./run_prot2vec.sh $PATH_TO_DATABASE 
+```
 
 This training process could take several days depending on the size of your protein sequence database. 
 
