@@ -30,6 +30,26 @@ This training process could take several days depending on the size of your prot
 
 The trained prot2vec model will be under the directory DATA.  
 
+## Hyper-parameters for training
+
+The hyper-parameters for training the prot2vec models is the same with the one for training a doc2vec model. 
+
+You can change the hyper-parameters at __line 9__ in the script ```run_prot2vec.sh```. These parameters include, 
+
+* __size__, which indicates the size of the vectors generated. The default values is set to 100. 
+
+* __window__, which indicate the maximum distance between the target words and its context words used for prediction. The default value is set to 25. 
+
+* __train_alpha__, which is the initial learning rate. The default value is set to 0.005. 
+
+* __iter__, which is the number of iteractions the training performed on the corpus. The default value is set to 400. 
+
+* __negative__, which indicates the number of examples sampled for negative sampling. The default value is set to 5. 
+
+* __hs__, which indicates whether hierarchical softmax is performed. The default value is set to 0. 
+
+The above hyper-parameters are derived from the doc2vec model, for which more detailed hyper-parameter descriptions can be found [here](https://radimrehurek.com/gensim/models/doc2vec.html). 
+
 ## Obtain the contextual vectors for protein sequences
 
 After the training of the prot2vec model is completed, you can obtain the contextual feature vectors for S/T/Y sites from your own prot2vec model. 
@@ -46,5 +66,5 @@ Here, the ```$PATH_TO_PROT2VEC``` refers to the path where your prot2vec model i
 
 The __window size__ can be adjusted to any size that you would like to test and the site type can be one of (__'S'__, __'T'__, __'Y'__ and __'*'__) where * means all three types of sites. 
 
-
+By combining the generated contextual vectors with other residue-level vector of potential phosphorylation sites, you can train your own models for predicting phosphorylation sites. 
 
