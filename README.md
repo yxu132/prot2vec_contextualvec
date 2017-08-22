@@ -5,9 +5,13 @@ This repository is for training prot2vec models and generating contextual vector
 ## Basic requirement
 
 To run the scripts in this repository, you need to install 
+
 	* Python >= 2.7.x
+
 	* [Numpy](http://www.numpy.org) >= 1.3
+
 	* [SciPy](https://www.scipy.org) >= 0.7 
+	
 	* [Gensim](https://radimrehurek.com/gensim/) >= 2.3.0
 
 The detailed description for the word2vec and doc2vec model can be found in [Distributed representations of words and phrases and their compositionality](https://arxiv.org/pdf/1310.4546.pdf) and [Distributed representation of Sentences and Documents](https://cs.stanford.edu/~quocle/paragraph_vector.pdf). 
