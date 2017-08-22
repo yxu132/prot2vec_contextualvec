@@ -42,7 +42,7 @@ If the path to this query file is ```$PATH_TO_QUERY```, you can obtain the conte
 > get_context.sh $PATH_TO_QUERY $PATH_TO_PROT2VEC 3 Y
 ```
 
-Here, the ```$PATH_TO_PROT2VEC``` refers to the path where your prot2vec model is saved. You can find it in directory ```DATA```. 
+Here, the ```$PATH_TO_PROT2VEC``` refers to the path where your prot2vec model is saved. You can find it in directory ```OUTPUT``` after training. The ```$PATH_TO_PROT2VEC``` could be something like ```OUTPUT/uniprot-all_s100_w25_lr0.005_itr400_ns5_hs0```. 
 
 The __window size__ can be adjusted to any size that you would like to test and the site type can be one of (__'S'__, __'T'__, __'Y'__ and __'*'__) where * means all three types of sites. 
 
