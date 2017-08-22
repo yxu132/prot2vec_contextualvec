@@ -34,11 +34,17 @@ The trained prot2vec model will be under the directory DATA.
 
 After the training of the prot2vec model is completed, you can obtain the contextual feature vectors for S/T/Y sites from your own prot2vec model. 
 
-The protein sequences in query should be saved in a file in the format of FASTA. If the path to this query file is $PATH_TO_QUERY, you can obtain the contextual vectors (window size = 2*3+1) for Y sites by running the following script, 
+You should prepare the protein sequences for query in the format of FASTA. 
 
+If the path to this query file is ```$PATH_TO_QUERY```, you can obtain the contextual vectors (of --window size = 2*3+1--) for --Y sites-- by running the following script, 
+
+```
 > get_context.sh $PATH_TO_QUERY $PATH_TO_PROT2VEC 3 Y
+```
 
-Here, the $PATH_TO_PROT2VEC refers to the path where your prot2vec model is saved, you can find it in directory DATA. The window size can be adjusted to any size that you would like to test and the site type can be one of ('S', 'T', 'Y' and '*') where * means all three types of sites. 
+Here, the ```$PATH_TO_PROT2VEC``` refers to the path where your prot2vec model is saved. You can find it in directory ```DATA```. 
+
+The --window size-- can be adjusted to any size that you would like to test and the site type can be one of (--'S', 'T', 'Y' and '*'--) where * means all three types of sites. 
 
 
 
